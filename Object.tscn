@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="PrismMesh" id=1]
+
+[sub_resource type="ConvexPolygonShape" id=2]
+points = PoolVector3Array( -1, -1, -1, -1, -1, 1, -0.0293034, 0.941393, -0.941393, -0.0293034, 0.941393, 0.941393, 0.0293034, 0.941393, -0.941393, 0.0293034, 0.941393, 0.941393, 0.147043, 0.705915, 0.94122, 1, -1, -1, 1, -1, 1 )
+
+[node name="Object" type="Spatial"]
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+
+[node name="MeshInstance" type="MeshInstance" parent="CollisionShape"]
+transform = Transform( -0.253132, -0.963351, -0.0887631, 0.961381, -0.260733, 0.088115, -0.108029, -0.0630305, 0.992148, 6.31532, -1.01999, 1.16328 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="CollisionShape"]
+transform = Transform( -0.253132, -0.963351, -0.0887631, 0.961381, -0.260733, 0.088115, -0.108029, -0.0630305, 0.992148, 6.31532, -1.01999, 1.16328 )
+shape = SubResource( 2 )
